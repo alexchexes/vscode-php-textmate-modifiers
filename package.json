@@ -1,0 +1,18 @@
+{
+  "name": "php-modifier-injection",
+  "displayName": "PHP Modifier Injection",
+  "description": "Adds fine-grained TextMate scopes for PHP modifiers",
+  "version": "0.0.6",
+  "publisher": "local",
+  "engines": { "vscode": "^1.90.0" },
+  "categories": ["Programming Languages"],
+  "contributes": {
+    "grammars": [
+      {
+        "path": "./syntaxes/php-modifiers.tmLanguage.json",
+        "scopeName": "php.modifier.injection",
+        "injectTo": ["source.php", "text.html.php", "meta.embedded.block.php"]
+      }
+    ]
+  }
+}
