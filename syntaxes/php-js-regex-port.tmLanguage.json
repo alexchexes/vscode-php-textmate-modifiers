@@ -1,0 +1,7 @@
+{
+  "scopeName": "php.regex.port.injection",
+  "injectionSelector": "L:string.regexp.single-quoted.php",
+  "patterns": [
+    { "include": "source.js#regexp" }
+  ]
+}

@@ -1,8 +1,13 @@
 {
   "name": "php-modifier-injection",
   "displayName": "PHP Modifier Injection",
-  "description": "Adds fine-grained TextMate scopes for PHP modifiers",
-  "version": "0.0.7",
+  "description": "Adds fine-grained TextMate scopes for PHP modifiers and ports JS regex sub-grammar into PHP regex strings",
+  "version": "0.0.10",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexchexes/vscode-php-textmate-modifiers"
+  },
   "publisher": "local",
   "engines": { "vscode": "^1.90.0" },
   "categories": ["Programming Languages"],
@@ -11,6 +16,11 @@
       {
         "path": "./syntaxes/php-modifiers.tmLanguage.json",
         "scopeName": "php.modifier.injection",
+        "injectTo": ["source.php", "text.html.php", "meta.embedded.block.php"]
+      },
+      {
+        "path": "./syntaxes/php-regex-port.tmLanguage.json",
+        "scopeName": "php.regex.port.injection",
         "injectTo": ["source.php", "text.html.php", "meta.embedded.block.php"]
       }
     ]
