@@ -3,9 +3,13 @@
   "injectionSelector": "L:source.php -string -comment, L:text.html.php -string -comment",
   "patterns": [
     { "name": "storage.modifier.static.php",   "match": "\\bstatic\\b(?!\\s*::)" },
+    
     { "name": "storage.modifier.readonly.php", "match": "\\breadonly\\b" },
     { "name": "storage.modifier.final.php",    "match": "\\bfinal\\b" },
     { "name": "storage.modifier.abstract.php", "match": "\\babstract\\b" },
-    { "name": "storage.modifier.access.php",   "match": "\\b(?:public|private|protected)\\b" }
+
+    { "name": "storage.modifier.access.public.php",    "match": "\\bpublic\\b" },
+    { "name": "storage.modifier.access.private.php",   "match": "\\bprivate\\b" },
+    { "name": "storage.modifier.access.protected.php", "match": "\\bprotected\\b" }
   ]
 }

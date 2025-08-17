@@ -2,7 +2,7 @@
   "name": "php-modifier-injection",
   "displayName": "PHP Modifier Injection",
   "description": "Adds fine-grained TextMate scopes for PHP modifiers",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "publisher": "local",
   "engines": { "vscode": "^1.90.0" },
   "categories": ["Programming Languages"],
