@@ -1,0 +1,28 @@
+{
+  "scopeName": "php.regex.charclass.guard.injection",
+  "injectionSelector": "L:string.regexp.single-quoted.php",
+  "patterns": [
+    {
+      "name": "meta.character-class.regexp.php",
+      "begin": "(\\[)(\\^)?(\\])?",
+      "beginCaptures": {
+        "1": { "name": "punctuation.definition.character-class.regexp" },
+        "2": { "name": "keyword.operator.negation.regexp" },
+        "3": { "name": "constant.other.character-class.set.regexp" }
+      },
+      "end": "(?<!\\\\)\\]",
+      "endCaptures": {
+        "0": { "name": "punctuation.definition.character-class.regexp" }
+      },
+      "patterns": [
+        {
+          "name": "constant.other.character-class.range.regexp",
+          "match": "(?:.|(\\\\x[0-9A-Fa-f]{2}|\\\\u[0-9A-Fa-f]{4}|\\\\[0-7]{3}|\\\\c[A-Z]|\\\\.))-(?:[^\\\\\\]]|(\\\\x[0-9A-Fa-f]{2}|\\\\u[0-9A-Fa-f]{4}|\\\\[0-7]{3}|\\\\c[A-Z]|\\\\.))"
+        },
+        { "include": "source.js#regex-character-class" },
+        { "name": "constant.other.character-class.literal-bracket.regexp", "match": "(?<!\\\\)\\[" },
+        { "name": "constant.character.escape.backslash.regexp", "match": "\\\\." }
+      ]
+    }
+  ]
+}

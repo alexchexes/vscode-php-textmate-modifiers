@@ -1,2 +1,14 @@
 <?php
-echo '/(?<name>\w+)\s+\1{2,}(?:[a-z&&[^b]])*/i'; 
+echo '/a/i'; 
+
+function test1()
+{
+    $r = '/[?>\][]/';
+    return;
+}
+
+function test2()
+{
+    // $r = '/[?>\][]/';
+    return;
+}

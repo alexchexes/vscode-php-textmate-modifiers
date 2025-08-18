@@ -2,7 +2,7 @@
   "name": "php-modifier-injection",
   "displayName": "PHP Modifier Injection",
   "description": "Adds fine-grained TextMate scopes for PHP modifiers and ports JS regex sub-grammar into PHP regex strings",
-  "version": "0.0.10",
+  "version": "0.0.22",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -14,13 +14,23 @@
   "contributes": {
     "grammars": [
       {
-        "path": "./syntaxes/php-modifiers.tmLanguage.json",
-        "scopeName": "php.modifier.injection",
+        "path": "./syntaxes/php-override.tmLanguage.json",
+        "scopeName": "source.php",
+        "language": "php"
+      },
+      {
+        "path": "./syntaxes/php-regex-charclass-guard.tmLanguage.json",
+        "scopeName": "php.regex.charclass.guard.injection",
         "injectTo": ["source.php", "text.html.php", "meta.embedded.block.php"]
       },
       {
         "path": "./syntaxes/php-regex-port.tmLanguage.json",
         "scopeName": "php.regex.port.injection",
+        "injectTo": ["source.php", "text.html.php", "meta.embedded.block.php"]
+      },
+      {
+        "path": "./syntaxes/php-modifiers.tmLanguage.json",
+        "scopeName": "php.modifier.injection",
         "injectTo": ["source.php", "text.html.php", "meta.embedded.block.php"]
       }
     ]
